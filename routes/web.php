@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 Route::resource('cursos', CursoController::class);
 //Route::resource('courses', CursoController::class)->parameters(['courses' => 'curso'])->names('cursos');
+Route::view('nosotros', 'nosotros')->name('nosotros');
